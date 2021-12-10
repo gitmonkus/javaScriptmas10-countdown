@@ -1,5 +1,5 @@
-const meter = document.getElementById("meter")
-const daysLeft = document.getElementById('days-left')
+const meter = document.getElementById("meter");
+const daysLeft = document.getElementById("days-left");
 
 // Task:
 // Write a function to wire up the festivity loader to reflect how many days are remaining until Christmas!
@@ -8,21 +8,20 @@ const daysLeft = document.getElementById('days-left')
 // - Animate the loader.
 // - Change the colors depending on the meter's value.
 
-const audio = new Audio('audio/intro.mp3')
+const date = new Date();
+const today = date.getDate();
+const christmas = 25;
+const days = christmas - today;
 
-const date = new Date()
-const today = date.getDate()
-const christmas = 25
-const days = christmas - today
-
+const audio = new Audio("audio/intro.mp3");
+document.getElementById("jingle-btn").addEventListener("click", function () {
+  audio.volume = 0.3;
+  audio.play();
+});
 
 function festivityLoader() {
-    audio.volume = .3
-    audio.play()
-    daysLeft.textContent = `${days} days left!`
-    meter.value = today
-    
-    
+  daysLeft.textContent = `${days} days left!`;
+  meter.value = today;
 }
 
-festivityLoader()
+festivityLoader();

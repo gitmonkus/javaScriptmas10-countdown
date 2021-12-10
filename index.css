@@ -1,99 +1,124 @@
 :root {
-  --wine-red: #C7375F;
-  --bright-red: #D42D2F;
-  --dark-green: #344D2F;
-  --light-green: #77A047;
-  --gold: #FAC57D;
-  --snow: #F0F4F7;
+  --wine-red: #c7375f;
+  --bright-red: #d42d2f;
+  --dark-green: #344d2f;
+  --light-green: #77a047;
+  --gold: #fac57d;
+  --snow: #f0f4f7;
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-html, body {
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    color: var(--dark-green);
-    background: url(img/candy.jpg);
-    background-size: cover;
-    font-family: 'Mountains of Christmas', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: var(--dark-green);
+  background: url(img/candy.jpg);
+  background-size: cover;
+  font-family: "Mountains of Christmas", cursive;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    background: var(--snow);
-    color: var(--snow);
-    padding: 1em 2em;
-    margin-left: 1em;
-    border-radius: 5px;
-    position: relative;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  display: flex;
+  align-items: center;
+  background: var(--snow);
+  color: var(--snow);
+  padding: 1em 2em;
+  margin-left: 1em;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .container p {
-    color: var(--bright-red);
-    font-size: 20px;
+  color: var(--bright-red);
+  font-size: 20px;
 }
 .main-container {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 300px;
-    align-items: center;
-    background: rgba(255, 0, 0, 0.1);
-    color: var(--snow);
-    padding: 1em 2em;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 300px;
+  align-items: center;
+  background: rgba(255, 0, 0, 0.1);
+  color: var(--snow);
+  padding: 1em 2em;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
-
 
 meter {
-    height: 50px;
-    width: 200px;
-    padding: 0 10px;
+  height: 50px;
+  width: 200px;
+  padding: 0 10px;
 }
 /*meter color*/
-meter::-webkit-meter-bar {background: var(--snow);}
-meter::-webkit-meter-optimum-value {background-image: linear-gradient(
-        135deg, 
-        var(--bright-red) 0%, 
-        var(--snow) 25%,
-        var(--bright-red) 50%,
-        var(--snow) 75%,
-        var(--bright-red) 100%
-      );}
+meter::-webkit-meter-bar {
+  background: var(--snow);
+}
+meter::-webkit-meter-optimum-value {
+  background-image: linear-gradient(
+    135deg,
+    var(--bright-red) 0%,
+    var(--snow) 25%,
+    var(--bright-red) 50%,
+    var(--snow) 75%,
+    var(--bright-red) 100%
+  );
+}
 
 meter::after {
-    content: attr(value);
-    color: var(--bright-red);
-    font-size: 40px;
+  content: attr(value);
+  color: var(--bright-red);
+  font-size: 40px;
 }
 
 .loading-title {
-    color: var(--bright-red);
-    font-size: 50px;
+  color: var(--bright-red);
+  font-size: 50px;
 }
 .month-title {
-    color: var(--bright-red);
+  color: var(--bright-red);
 }
 
 .days-left {
-    color: var(--snow);
-    background: var(--dark-green);
-    border-radius: 10px;
-    padding: 10px;
-    position: absolute;
-    top: -50%;
-    right: -5%;
-    padding-bottom: 10px;
-    box-shadow: 0 2px 2px -2px var(--snow);
-    
+  color: var(--snow);
+  background: var(--dark-green);
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  top: -50%;
+  right: -5%;
+  padding-bottom: 10px;
+  box-shadow: 0 2px 2px -2px var(--snow);
+}
+.jingle-btn {
+  display: inline-block;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--bright-red);
+  color: var(--snow);
+  font-size: 20px;
+  transform: rotate(-25deg);
+  position: absolute;
+  top: -10%;
+  left: 0%;
+  opacity: 0.8;
+}
+.jingle-btn:hover {
+  background: var(--snow);
+  color: var(--bright-red);
+  cursor: pointer;
 }
